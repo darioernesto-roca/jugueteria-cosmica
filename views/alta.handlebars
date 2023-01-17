@@ -1,0 +1,84 @@
+        <h1 class="section-alta__main-heading">Alta</h1>
+        <p class="alta__paragraph">Ingresa aquí la información del producto</p>
+        <div class="form-container">
+        <form action="/register" class="form" method="POST" autocomplete="off">
+            <div class="form__label-container">
+                <label for="name" class="form__label">Nombre</label>
+                <input type="text" name="name" id="name" autofocus required minlength="2" maxlength="20" class="form__input">
+            </div>
+            <div class="form__label-container">
+                <label for="price" class="form__label">Precio</label>
+                <input type="number" name="price" id="price" required min="0.00" maxlength="1000000" step='1' class="form__input">
+            </div>
+            <div class="form__label-container">
+                <label for="stock" class="form__label">Stock</label>
+                <input type="number" name="stock" id="stock" required minlength="2" maxlength="20" class="form__input">
+            </div>
+            <div class="form__label-container">
+                <label for="brand" class="form__label">Marca</label>
+                <input type="text" name="brand" id="brand" required minlength="2" maxlength="20" class="form__input">
+            </div>
+            <div class="form__label-container">
+                <label for="category" class="form__label">Categoría</label>
+                <input type="text" name="category" id="category" required minlength="2" maxlength="20" class="form__input">
+            </div>
+            <div class="form__label-container">
+                <label for="short-description" class="form__label">Descripción corta</label>
+                <input type="text" name="short-description" id="short-description" required minlength="2" maxlength="20" class="form__input">
+            </div>
+            <div class="form__label-container">
+                <label for="long-description" class="form__label">Descripción larga</label>
+                <textarea type="text" name="long-description" id="long-description" required minlength="2" maxlength="200" class="form__text-area"></textarea>
+            </div>
+            <div class="form__label-container">
+                <label for="shipping" class="form__label">Envío sin cargo</label>
+                <input type="checkbox" name="shipping" id="shipping" required minlength="2" maxlength="20" class="form__checkbox">
+            </div>
+            <div class="form__label-container">
+                <label for="age-from" class="form__label">Edad desde:</label>
+                <input type="number" id="age-from" name="age-from" list="list-ages" min="0" max="14" class="form__input-age">
+                <datalist id="list-ages">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                    <option value="7">
+                    <option value="8">
+                    <option value="9">
+                    <option value="10">
+                    <option value="11">
+                    <option value="12">
+                    <option value="13">
+                    <option value="14">
+                </datalist>
+            </div>
+            <div class="form__label-container">
+                <label for="age-to" class="form__label">Edad hasta:</label>
+                <input type="number" id="age-to" name="age-to" list="list-ages" min="0" max="14" class="form__input-age">
+                <datalist id="list-ages">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                    <option value="7">
+                    <option value="8">
+                    <option value="9">
+                    <option value="10">
+                    <option value="11">
+                    <option value="12">
+                    <option value="13">
+                    <option value="14">
+                </datalist>
+            </div>
+            <div class="form__label-container">
+                <label for="picture" class="form__label">Foto</label>
+                <input type="file" name="picture" id="picture" required class="form__input">
+            </div>
+            <button class="form__btn-submit">Enviar</button>
+            <footer class="form__footer"><p class="form__footer__paragraph">Todos los campos son obligatorios</p></footer>
+        </form>
+        </div>

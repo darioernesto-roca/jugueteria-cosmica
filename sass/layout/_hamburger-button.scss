@@ -1,0 +1,63 @@
+
+
+.hamburger-button {
+    display: block;
+    background-color: #b5cde7;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    box-shadow:
+        1px 3px 5px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(0, 0, 0, .05);
+    border-radius: 3px;
+    
+    &:hover {
+        background-color: #f6d80e;
+    }
+
+    &__top-bread {
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: .3em;
+        background-color: #1a1a1a;
+        left: 10%;
+        top: 20%;
+    }
+    
+    &__meat {
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: .3em;
+        background-color: #1a1a1a;
+        transform: translateY(-50%);
+        left: 10%;
+        top: 50%;
+    } 
+    &__bottom-bread {
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: .3em;
+        background-color: #1a1a1a;
+        left: 10%;
+        bottom: 20%;
+    }
+
+}
+
+
+.main-nav-toggle:checked ~ .main-header .hamburger-button {
+    background-color: hsla(198, 70%, 50%, 0.75);
+
+    &:hover {
+        background-color: hsla(198, 70%, 50%, 0.75);
+    }
+
+}
+
+
+

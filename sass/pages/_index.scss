@@ -1,0 +1,15 @@
+
+
+.cards-container {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em; 
+    justify-content: center;
+    align-items: stretch;
+
+    @media (min-width: 1200px) {
+        gap: 3em;
+    }
+}
+

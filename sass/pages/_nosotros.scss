@@ -1,0 +1,31 @@
+
+.section-us {
+    margin: 0 auto;
+    padding: 3em;
+
+    &__paragraph-container {
+        padding: 2em 0;
+    }
+
+    &__main-heading {
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+    }
+
+    &__image {
+        width: 100%;
+        float: right;
+        max-width: 425px;
+        margin-bottom: 3em;
+        margin-left: 3em;
+        border: solid 0.7em #fff;
+        border-radius: 6px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #1f82ad;
+        cursor: pointer;
+    }
+}
+

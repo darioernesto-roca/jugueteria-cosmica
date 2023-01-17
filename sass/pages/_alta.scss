@@ -1,0 +1,67 @@
+.section-alta__main-heading {
+        font-family: 'Playfair Display', serif;
+        text-align: center;           
+        margin: 0 auto;
+        padding: 3em;
+    }
+
+
+.form-container{
+        padding: 1em;
+        max-width: 600px;
+        margin: 0 auto;
+        
+    }
+
+.form {
+    background-color: #cce5ea;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+    border-radius: 3px;
+    padding: 0.5em;
+
+
+    &__input {
+        order: 0;
+        flex: 2;
+
+    }
+    &__input-age {
+        width: 4em;
+    }
+
+    &__text-area {
+        height: 200px;
+        width: 228px;
+
+        @media (min-width: 320px) {
+            flex-basis: 65%;
+        }
+
+        
+    }
+
+    &__checkbox {
+        width: 20px;
+    }
+
+    &__label-container {
+        background-color: #cce5ea;
+        display: flex;
+        justify-content: flex-end;
+        padding: .5em;
+    }
+
+    &__label {
+        padding: .5em 1em .5em 0;
+        flex: 1;
+    }
+
+}
+
+
+

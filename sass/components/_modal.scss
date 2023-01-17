@@ -1,0 +1,121 @@
+/* Contenedor del modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+/* Contenido del modal */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Título del modal */
+.modal-title {
+  margin-top: 0;
+}
+
+/* Botón para cerrar el modal */
+.modal-close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: gray;
+}
+
+/* Formulario dentro del modal */
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Contenedor de cantidad dentro del formulario */
+.modal-form__quantity-container {
+  flex-basis: 100%;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Botón para agregar al carrito dentro del formulario */
+.modal-form__add-to-cart-button {
+  flex-basis: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Contenido del carrito */
+.modal-cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Título del carrito */
+.modal-cart__title {
+  margin-top: 0;
+}
+
+/* Contenedor de elementos del carrito */
+.modal-cart__items-container {
+  overflow-y: auto;
+  max-height: 60%;
+}
+
+/* Pie del carrito */
+.modal-cart__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Botón de compra en el pie del carrito */
+.modal-cart__checkout-button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Botón de compra en el pie del carrito */
+.modal-cart__checkout-button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Esconder los inputs del modal */
+#mostrar-modal,
+#cerrar-modal {
+  display: none;
+}
+
+/* Mostrar el modal cuando el input "mostrar-modal" esté marcado */
+#mostrar-modal:checked ~ .modal-container {
+  display: flex;
+}

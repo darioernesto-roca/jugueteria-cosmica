@@ -1,0 +1,113 @@
+/* Paleta de colores
+#1f82ad; Azul
+#f6d80e; amarillo
+#fc0404; rojo
+#cce5ea; gris
+#f07402; naranja
+*/
+
+
+
+.card {
+    /*border: 5px solid green; */
+    width: 10em;
+    flex-grow: 0;
+    box-shadow:
+        1px 3px 5px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(0, 0, 0, .05);
+    border-radius: 5px 5px 0 0
+    ;
+    /*height: 200px; */
+    /*transition: height .3s, background-color 3s; */ 
+    transition: all .2s;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+        width: 15em;
+    }
+
+    &:hover {
+        transform: scale(1.06) rotate(.8deg);
+        transform-origin: bottom;
+    }
+        
+    &:nth-child(5n+1) {
+        background: linear-gradient(to bottom, hsl(198, 70%, 90%) 0%, hsl(198, 70%, 40%) 100%);
+
+    }
+        
+    &:nth-child(5n+2) {
+        background: linear-gradient(to bottom, hsl(52, 93%, 90%) 0%, hsl(52, 93%, 40%) 100%);
+    }
+        
+    &:nth-child(5n+3) {
+        background: linear-gradient(to bottom, hsl(0, 98%, 90%) 0%, hsl(0, 98%, 40%) 100%);
+    }
+        
+    &:nth-child(5n+4) {
+        background: linear-gradient(to bottom, hsl(190, 42%, 90%) 0%, hsl(190, 42%, 40%) 100%);
+    }
+        
+    &:nth-child(5n+5) {
+        background: linear-gradient(to bottom, hsl(29, 98%, 90%) 0%, hsl(29, 98%, 40%) 100%);
+    }
+        
+    &__article {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 320px) {
+            flex-direction: row;
+        }
+
+        @media (min-width: 500px) {
+                flex-direction: column;
+        }
+    }
+        
+    &_image-container {
+        background: #303030;
+        /*border: 5px solid red; */ 
+        height: 10em;
+
+        @media (min-width: 320px) {
+            width: 10em;
+        
+        }
+
+        @media (min-width: 500px) {
+            width: 100%;
+        }
+    }
+
+    &__heading {
+        font-size: 1em;
+        padding: 0 0.9em;
+    }
+
+    &__list__item {
+        list-style-type: none;
+    }
+        
+    &__image {
+        /*borden: 4px solid black; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+        
+    // &__content {
+    //     *border: 4px solid magenta;
+    // }
+}
+    
+
+
+
+
+
+
+
+
+
+
