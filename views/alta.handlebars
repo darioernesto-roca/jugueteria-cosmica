@@ -1,7 +1,7 @@
         <h1 class="section-alta__main-heading">Alta</h1>
         <p class="alta__paragraph">Ingresa aquí la información del producto</p>
         <div class="form-container">
-        <form action="/register" class="form" method="POST" autocomplete="off">
+        <form action="/alta" class="form" method="POST" autocomplete="off">
             <div class="form__label-container">
                 <label for="name" class="form__label">Nombre</label>
                 <input type="text" name="name" id="name" autofocus required minlength="2" maxlength="20" class="form__input">
@@ -20,15 +20,15 @@
             </div>
             <div class="form__label-container">
                 <label for="category" class="form__label">Categoría</label>
-                <input type="text" name="category" id="category" required minlength="2" maxlength="20" class="form__input">
+                <input type="text" name="category" id="category" required minlength="2" class="form__input">
             </div>
             <div class="form__label-container">
                 <label for="short-description" class="form__label">Descripción corta</label>
-                <input type="text" name="short-description" id="short-description" required minlength="2" maxlength="20" class="form__input">
+                <input type="text" name="short-description" id="short-description" required minlength="2" class="form__input">
             </div>
             <div class="form__label-container">
                 <label for="long-description" class="form__label">Descripción larga</label>
-                <textarea type="text" name="long-description" id="long-description" required minlength="2" maxlength="200" class="form__text-area"></textarea>
+                <textarea type="text" name="long-description" id="long-description" required minlength="2" class="form__text-area"></textarea>
             </div>
             <div class="form__label-container">
                 <label for="shipping" class="form__label">Envío sin cargo</label>
@@ -75,8 +75,8 @@
                 </datalist>
             </div>
             <div class="form__label-container">
-                <label for="picture" class="form__label">Foto</label>
-                <input type="file" name="picture" id="picture" required class="form__input">
+                <label for="image" class="form__label">Foto</label>
+                <input type="file" name="image" id="image" required class="form__input">
             </div>
             <button class="form__btn-submit">Enviar</button>
             <footer class="form__footer"><p class="form__footer__paragraph">Todos los campos son obligatorios</p></footer>
