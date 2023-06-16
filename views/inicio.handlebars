@@ -10,7 +10,8 @@
             <img src="/img/promotions/black-friday.jpg" alt="Promotion Black Friday" class="main-slider__image">
         </div>
         <div class="main-slider__item-slide">
-            <img src="/img/promotions/fifthy-percent-off.jpg" alt="Promotion Fifty Percent Off" class="main-slider__image">
+            <img src="/img/promotions/fifthy-percent-off.jpg" alt="Promotion Fifty Percent Off"
+                class="main-slider__image">
         </div>
         <div class="main-slider__item-slide">
             <img src="/img/promotions/promotion-encanto.jpg" alt="Promotion Encanto" class="main-slider__image">
@@ -45,28 +46,26 @@
         {{#each products}}
         <div class="card">
             <article class="card__article">
-            <div class="card__image-container">
-                <img class="card__image" src="{{this.image}}" alt="{{this.name}}">
-            </div>
-            <div class="card__content">
-                <h2 class="card__heading">{{this.name}}</h2>
-                <p class="card__description">
+                <div class="card__image-container">
+                    <img class="card__image" src="{{this.image}}" alt="{{this.name}}">
+                </div>
+                <div class="card__content">
+                    <h2 class="card__heading">{{this.name}}</h2>
+                    <p class="card__description">
                     <ul class="card__list">
                         <li class="card__list__item">Categoría: {{this.category}}</li>
                         <li class="card__list__item">Precio: ${{this.price}}</li>
                         <li class="card__list__item">Disponibles: {{this.stock}}</li>
 
                     </ul>
-                </p>
-            </div>
+                    </p>
+                </div>
             </article>
         </div>
         {{/each}}
     </div>
 
-    
+
     </div>
 </section>
 <script src="js/cart.js"></script>
-
-

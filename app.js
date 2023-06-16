@@ -12,7 +12,6 @@ const methodOverride = require("method-override");
 const dbConnect = require('./config/db');
 const hbs = handlebars.create();
 const bodyParser = require('body-parser');
-// const Product = require('./models/product.model');
 
 
 // Connecting to the database

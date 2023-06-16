@@ -9,7 +9,7 @@ const dbConnect = () => {
         useUnifiedTopology: true
     })
     .then((db) => console.log("Mongodb is connected to", db.connection.host))
-    .catch((err) => console.log(`Este error viene del catch ${err}`));
+    .catch((err) => console.log(`Error in the database connection ${err}`));
 }
 
 module.exports = dbConnect;

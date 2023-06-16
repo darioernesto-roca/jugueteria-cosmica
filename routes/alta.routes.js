@@ -1,27 +1,28 @@
-const express = require('express');
-const expressValidator = require('express-validator');
-const altaController = require('../controllers/altaController');
+const express = require("express");
+const expressValidator = require("express-validator");
+const altaController = require("../controllers/altaController");
 const router = express.Router();
-const Product = require('../models/product.model');
-const cloudinary = require('../utils/cloudinary');
-const upload = require('../utils/multer');
+const Product = require("../models/product.model");
+const cloudinary = require("../utils/cloudinary");
+const upload = require("../utils/multer");
 
-router.post('/alta', upload.single('image'), async (req, res) => {
+// Posting a new product
+router.post("/alta", upload.single("image"), async (req, res) => {
   try {
     const errors = expressValidator.validationResult(req);
     if (!errors.isEmpty()) {
       res.status(400).json({ errors: errors.array() });
       console.log(errors);
-      console.log('Vengo de los errores de las validaciones de routes/alta');
+      console.log("Vengo de los errores de las validaciones de routes/alta");
       return;
     }
     if (!req.file) {
-      res.status(400).json({ error: 'No se ha enviado ningún archivo' });
+      res.status(400).json({ error: "No se ha enviado ningún archivo" });
       return;
     }
     console.log(req.body);
     const imageCloudinary = await cloudinary.uploader.upload(req.file.path);
-    console.log(imageCloudinary)
+    console.log(imageCloudinary);
     const newProduct = new Product({
       name: req.body.name,
       price: req.body.price,
@@ -40,30 +41,32 @@ router.post('/alta', upload.single('image'), async (req, res) => {
     newProduct
       .save()
       .then((result) => {
-        res.status(200).json({ message: 'Producto agregado exitosamente' });
+        res.status(200).json({ message: "Producto agregado exitosamente" });
       })
-      .catch((error) => {n
+      .catch((error) => {
+        n;
         console.log(error);
-        res.status(500).json({ error: 'Error al crear el producto' });
+        res.status(500).json({ error: "Error al crear el producto" });
       });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'Error al crear el producto' });
+    res.status(500).json({ error: "Error al crear el producto" });
   }
 });
 
-router.get('/alta.html', function (req, res, next) {
-  if (req.path === '/alta.html') {
-    res.render('alta', {
-      title: 'Juguetería Cósmica | Alta',
+// Render alta.html page
+router.get("/alta.html", function (req, res, next) {
+  if (req.path === "/alta.html") {
+    res.render("alta", {
+      title: "Juguetería Cósmica | Alta",
     });
   } else {
     next();
   }
 });
 
-router.put('/alta/:id', altaController.updateProduct);
+router.put("/alta/:id", altaController.updateProduct);
 
-router.delete('/alta/:id', altaController.deleteProduct);
+router.delete("/alta/:id", altaController.deleteProduct);
 
 module.exports = router;
