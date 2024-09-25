@@ -1,5 +1,5 @@
 {
-  "name": "nodestock",
+  "name": "Cosmic Library",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,12 +11,12 @@
   "author": "Darío Ernesto Roca",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.1",
+    "body-parser": "^1.20.3",
     "cloudinary": "^1.34.0",
     "cors": "^2.8.5",
-    "dompurify": "^2.4.3",
+    "dompurify": "^2.5.4",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "express": "^4.21.0",
     "express-handlebars": "^6.0.6",
     "express-validator": "^6.14.2",
     "jsdom": "^21.1.0",

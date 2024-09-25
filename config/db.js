@@ -1,3 +1,4 @@
+require("dotenv").config({ path: '/env/DB_URI' });
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 const DB_URI = process.env.DB_URI;
@@ -13,3 +14,4 @@ const dbConnect = () => {
 }
 
 module.exports = dbConnect;
+
