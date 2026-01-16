@@ -1,21 +1,24 @@
 //app.js
 
 require("dotenv").config();
-const express = require('express');
+const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
-const path = require('path');
-const handlebars = require('express-handlebars');
+const path = require("path");
+const handlebars = require("express-handlebars");
 const cors = require("cors");
 const methodOverride = require("method-override");
-const dbConnect = require('./config/db');
+const dbConnect = require("./config/db");
 const hbs = handlebars.create();
-const bodyParser = require('body-parser');
-
 
 // Connecting to the database
-dbConnect();
+(async () => {
+  try {
+    await dbConnect();
+  } catch (error) {
+    console.error(error.message);
+    process.exit(1);
+  }
+})();
 
 // Using CORS for every request
 app.use(cors());
@@ -24,11 +27,7 @@ app.use(cors());
 app.use(express.json());
 
 // To parse the form data sent by users in the request and to store the data in an req.body object
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-
-
+app.use(express.urlencoded({ extended: false }));
 
 // Setting the routes
 const contactoRoutes = require("./routes/contacto.routes");
@@ -37,17 +36,14 @@ const indexRoutes = require("./routes/index");
 app.use(contactoRoutes);
 app.use(indexRoutes);
 
-
 // Setting handlebars middleware
 app.engine("handlebars", hbs.engine);
-app.set('view engine', 'handlebars');
-app.use(express.urlencoded({ extended: false }));
+app.set("view engine", "handlebars");
 app.use(methodOverride("_method"));
-app.set('views', path.join(__dirname, 'views'));
-
+app.set("views", path.join(__dirname, "views"));
 
 // Setting static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Setting the PORT listening
 const PORT = process.env.PORT || 5000;
