@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "dompurify": "^3.2.4",
     "dotenv": "^16.0.3",
-    "express": "^4.21.2",
+    "express": "^4.22.1",
     "express-handlebars": "^6.0.6",
     "express-validator": "^6.14.2",
     "jsdom": "^21.1.0",
