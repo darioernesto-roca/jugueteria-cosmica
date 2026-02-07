@@ -37,6 +37,12 @@ Copy `.env.example` to `.env` and fill in the values:
 ```
 PORT=5000
 DB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/<database>?retryWrites=true&w=majority
+MONGOOSE_STRICT_QUERY=true
+DB_SERVER_SELECTION_TIMEOUT_MS=5000
+DB_SOCKET_TIMEOUT_MS=45000
+DB_MAX_POOL_SIZE=20
+DB_MIN_POOL_SIZE=2
+DB_MAX_IDLE_TIME_MS=30000
 CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
