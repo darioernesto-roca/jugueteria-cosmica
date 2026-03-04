@@ -8,7 +8,7 @@
     "dev": "nodemon app"
   },
   "keywords": [],
-  "author": "Darío Ernesto Roca",
+  "author": "Dar\u00edo Ernesto Roca",
   "license": "ISC",
   "dependencies": {
     "cloudinary": "^2.7.0",
@@ -22,7 +22,7 @@
     "marked": "^4.2.12",
     "method-override": "^3.0.0",
     "mongoose": "^7.8.4",
-    "multer": "^2.0.2",
+    "multer": "^2.1.0",
     "slugify": "^1.6.5"
   }
 }
