@@ -8,21 +8,21 @@
     "dev": "nodemon app"
   },
   "keywords": [],
-  "author": "Dar\u00edo Ernesto Roca",
+  "author": "Dario Ernesto Roca",
   "license": "ISC",
   "dependencies": {
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
-    "dompurify": "^3.2.4",
+    "dompurify": "^3.3.2",
     "dotenv": "^16.0.3",
     "express": "^4.22.1",
     "express-handlebars": "^6.0.6",
     "express-validator": "^6.14.2",
-    "jsdom": "^21.1.0",
+    "jsdom": "^29.0.2",
     "marked": "^4.2.12",
     "method-override": "^3.0.0",
     "mongoose": "^7.8.4",
-    "multer": "^2.1.0",
+    "multer": "^2.1.1",
     "slugify": "^1.6.5"
   }
 }
