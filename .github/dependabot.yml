@@ -37,7 +37,7 @@ updates:
     labels:
       - "dependencies"
 
-  # ---- GitHub Actions (harmless if you add workflows later) ----
+  # ---- GitHub Actions ----
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
