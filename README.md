@@ -1,6 +1,6 @@
 # Jugueteria Cósmica (Cosmic Library)
 
-Bootcamp final project built with Express, Handlebars, and MongoDB.
+Bootcamp final project built with Express, Handlebars (Template Engines), and MongoDB.
 
 ## Features
 
