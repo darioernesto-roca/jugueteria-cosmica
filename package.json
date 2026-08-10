@@ -11,8 +11,8 @@
   "author": "Dario Ernesto Roca",
   "license": "ISC",
   "dependencies": {
-    "cloudinary": "^2.7.0",
-    "cors": "^2.8.5",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.6",
     "dotenv": "^16.0.3",
     "express": "^4.22.2",
     "express-handlebars": "^9.0.1",
