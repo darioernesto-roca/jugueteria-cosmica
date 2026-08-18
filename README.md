@@ -4,7 +4,7 @@ Bootcamp final project built with Express, Handlebars (Template Engines), and Mo
 
 ## Features
 
-- Express server with Handlebars views
+- Express server with Handlebars views (Template Engines)
 - MongoDB/Mongoose data layer
 - Image uploads via Cloudinary
 - RESTful routes for products and contact forms
