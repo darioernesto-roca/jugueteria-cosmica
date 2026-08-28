@@ -13,7 +13,7 @@
   "dependencies": {
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
+    "dotenv": "^17.4.2",
     "express": "^4.22.2",
     "express-handlebars": "^9.0.1",
     "express-validator": "^6.14.2",
